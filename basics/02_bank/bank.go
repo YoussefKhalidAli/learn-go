@@ -50,11 +50,7 @@ func readBalance() float64 {
 		return 1000
 	}
 	readBalance := string(data)
-	balance, err := strconv.ParseFloat(readBalance, 64)
-
-	if err != nil {
-		panic(err)
-	}
+	balance, _ := strconv.ParseFloat(readBalance, 64)
 
 	return balance
 }
